@@ -2,14 +2,13 @@ package nineonesoft.todo.repository;
 
 import nineonesoft.todo.domain.Todo;
 import org.springframework.stereotype.Repository;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-@Repository
+//@Repository
 public class TodoMemoryRepositoryImpl implements TodoMemoryRepository {
 
     private Map<Long, Todo> map = new HashMap<>();
