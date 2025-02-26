@@ -28,8 +28,8 @@ public class Todo {
     @Column(name = "title")
     private String title;
 
-    @Column(name = "description")
-    private String description;
+    @Column(name = "detail")
+    private String detail;
 
     @Column(name = "created")
     private LocalDateTime created;
@@ -57,7 +57,7 @@ public class Todo {
         return ResponseTodo.builder()
                 .id(id)
                 .title(title)
-                .description(description)
+                .detail(detail)
                 .created(created)
                 .updated(updated)
                 .build();
@@ -79,7 +79,7 @@ public class Todo {
      */
     public void updateTodo(UpdateTodoDto updateRequest) {
         title = updateRequest.getTitle();
-        description = updateRequest.getDescription();
+        detail = updateRequest.getDetail();
         updated = LocalDateTime.now();
     }
 
@@ -90,18 +90,18 @@ public class Todo {
      * @return
      */
     public static Todo createTodo(CreateTodoDto createRequest) {
-        return new Todo(createRequest.getTitle(), createRequest.getDescription());
+        return new Todo(createRequest.getTitle(), createRequest.getDetail());
     }
 
 
     /**
      * 생성자
      * @param title
-     * @param description
+     * @param detail
      */
-    private Todo(String title, String description) {
+    private Todo(String title, String detail) {
         this.title = title;
-        this.description = description;
+        this.detail = detail;
         this.created = LocalDateTime.now();
         this.updated = LocalDateTime.now();
     }

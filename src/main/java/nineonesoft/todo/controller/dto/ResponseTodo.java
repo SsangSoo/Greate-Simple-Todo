@@ -10,17 +10,17 @@ import java.time.LocalDateTime;
 public class ResponseTodo {
     private Long id;
     private String title;
-    private String description;
+    private String detail;
 
     private LocalDateTime created;
     private LocalDateTime updated;
 
 
     @Builder
-    public ResponseTodo(Long id, String title, String description, LocalDateTime created, LocalDateTime updated) {
+    public ResponseTodo(Long id, String title, String detail, LocalDateTime created, LocalDateTime updated) {
         this.id = id;
         this.title = title;
-        this.description = description;
+        this.detail = detail;
         this.created = created;
         this.updated = updated;
     }

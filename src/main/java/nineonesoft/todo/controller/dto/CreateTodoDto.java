@@ -12,11 +12,11 @@ import lombok.ToString;
 public class CreateTodoDto {
 
     private String title;
-    private String description;
+    private String detail;
 
 
-    public CreateTodoDto(String title, String description) {
+    public CreateTodoDto(String title, String detail) {
         this.title = title;
-        this.description = description;
+        this.detail = detail;
     }
 }
