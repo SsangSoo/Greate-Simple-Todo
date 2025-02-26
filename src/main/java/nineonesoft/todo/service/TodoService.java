@@ -5,7 +5,7 @@ import lombok.RequiredArgsConstructor;
 import nineonesoft.todo.controller.dto.CreateTodoDto;
 import nineonesoft.todo.controller.dto.UpdateTodoDto;
 import nineonesoft.todo.domain.Todo;
-import nineonesoft.todo.repository.TodoRepository;
+import nineonesoft.todo.repository.TodoMemoryRepository;
 import nineonesoft.todo.service.usecase.TodoUsecase;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +16,7 @@ import java.util.List;
 @Transactional
 public class TodoService implements TodoUsecase {
 
-    private final TodoRepository todoRepository;
+    private final TodoMemoryRepository todoRepository;
 
     @Override
     public Todo create(CreateTodoDto createRequest) {

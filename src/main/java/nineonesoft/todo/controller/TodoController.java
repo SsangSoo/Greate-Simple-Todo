@@ -23,7 +23,7 @@ public class TodoController {
 
     private final TodoUsecase todoUsecase;
 
-    @GetMapping("/")
+    @GetMapping
     public String homeController(Model model) {
         List<ResponseTodo> responseTodos = new ArrayList<>();
         for (Todo todo : todoUsecase.get()) {
